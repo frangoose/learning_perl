@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+
+print "This program prints a user specified string a user specified number of times.\n";
+
+print "Enter a string.\n";
+$mystring = <STDIN>;
+print "Enter the number of times to print the string you entered previously.\n";
+$counter = <STDIN>;
+
+while($counter > 0){
+	print $mystring;
+	$counter--;
+}

@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+
+print "This program takes two user specified values and computes their product.\n";
+print "Enter the first multiplicand.\n";
+chomp($var1=<STDIN>);
+print "Enter the second multiplicand.\n";
+chomp($var2=<STDIN>);
+$product = $var1* $var2;
+print "$var1 * $var2 = $product\n";

@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+
+print("Enter the radius and the circumfernce will be calculated:\n");
+chomp($rad = <STDIN>);
+if($rad < 0){
+	$circum = 0
+}
+else{
+	$circum = $rad*2*3.14;
+}
+print("For a circle with radius $rad, the circumference is $circum.\n");
