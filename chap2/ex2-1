@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+
+$rad = 12.5;
+$circum = $rad*2*3.14;
+print("For a circle with radius $rad, the circumference is $circum.\n");
