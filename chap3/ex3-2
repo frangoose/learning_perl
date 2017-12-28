@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+
+@names = qw (fred betty barney dino wilma pebbles bamm-bamm);
+
+print "Type a single number and press enter. Ctrl+D when you are finished with data entry.\n";
+@indices = <STDIN>;
+
+print "\n";
+foreach $index (@indices){
+	print $names[$index];
+	print "\n";
+}

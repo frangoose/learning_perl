@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+
+print "Type a string and press enter. Ctrl+D when you are finished with data entry.\n";
+@input = <STDIN>;
+
+print "\n";
+print sort @input;
