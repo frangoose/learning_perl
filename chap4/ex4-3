@@ -1,0 +1,33 @@
+#!/usr/bin/perl
+
+sub above_average{
+	my $avg = find_average(@_);
+	my @list;
+	foreach(@_){
+		if($_ > $avg){
+			push @list, $_;
+		}
+	}
+	@list;
+}
+
+sub find_average{
+	my $avg;
+	foreach (@_){
+		$avg += $_;
+	}
+	$avg / @_;
+}
+
+
+#test routine
+my @fred = above_average(1..10);
+$avg = find_average(1..10);
+print "Average is $avg\n";
+print "\@fred is @fred\n";
+print "(Should be 6 7 8 9 10)\n";
+$avg = find_average(100, 1..10);
+print "Average is $avg\n";
+my @barney = above_average(100, 1..10);
+print "\@barney is @barney\n";
+print "(Should be just 100)\n";

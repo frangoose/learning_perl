@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+
+use 5.0.10;
+use feature state;
+
+sub greet{
+	state $last_person;	
+	my $friend = shift;
+	print "Hi $friend! ";
+	if(defined $last_person){
+		print "$last_person is also here!\n";
+	}
+	else{
+		print "You are the first one here!\n";
+	}
+	$last_person = $friend;	
+}
+
+#test routine
+greet( 'Fred' );
+greet( 'Barney' );
