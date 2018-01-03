@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+
+print "Enter some lines of text. Press Ctrl+D when you are finished.\n";
+chomp(my @lines = <STDIN>);
+print "12345567890" x 3 . "\n";
+
+foreach (@lines){
+	printf "%20s\n", $_;
+}

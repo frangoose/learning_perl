@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+
+print "How wide would you like your columns to be?\n";
+chomp(my $width = <STDIN>);
+
+print "Enter some lines of text. Press Ctrl+D when you are finished.\n";
+chomp(my @lines = <STDIN>);
+print "12345567890" x (($width+9)/10) . "\n";
+
+foreach (@lines){
+	printf "%${width}s\n", $_;
+}
