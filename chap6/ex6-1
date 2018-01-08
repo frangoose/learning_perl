@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+
+%my_hash = (
+	Danny	=>	'Facchiano',
+	John	=>	'Luckenbach',
+	Jen	=>	'Lotfy',
+	Nick	=>	'Frangos',
+	Steven	=>	'Frangos',
+	Enzo	=>	'Herrera',
+);
+
+
+print "Enter a person's first name\n";
+chomp (my $firstname = <STDIN>);
+
+if(exists $my_hash{$firstname}){
+	print "$firstname $my_hash{$firstname}.\n";
+}
+else{
+	print "I do not know $firstname\'s last name\n";
+}

@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+
+print "Enter a single word per line\n";
+chomp (my @words = <STDIN>);
+
+foreach $word (@words){
+	$count{$word} += 1;
+}
+
+foreach $word (sort keys %count){
+	print "$word was seen $count{$word} time(s).\n";
+}
